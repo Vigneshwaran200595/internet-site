@@ -58,24 +58,70 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:12px 2
 .coverage-hero h1{position:relative; z-index:1; color:#0a1f44;}
 .coverage-hero p{position:relative; z-index:1; color:#0a1f44; font-size:1.3em; max-width:800px; margin:20px auto 30px;}
 
-/* COVERAGE GRID */
-.coverage-section{padding: 60px 5%; max-width:1200px; margin:40px auto; text-align:center;}
-.coverage-section h2{font-size:2.5em; margin-bottom:40px; color:#0a1f44;}
-.coverage-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+/* COVERAGE SECTION */
+.coverage-section {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.coverage-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #0a1f44;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Common Card Style */
 .coverage-card {
-  background-size:cover; background-position:center;
-  color:white; 
-  border-radius:10px; padding:30px; position:relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height:220px; display:flex; flex-direction:column; justify-content:flex-end;
-  cursor:pointer; text-decoration:none;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
 }
-.coverage-card::before{
-  content:''; position:absolute; top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.4); border-radius:10px; z-index:0;
+
+.coverage-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  z-index: 0;
 }
-.coverage-card h3,.coverage-card p{position:relative; z-index:1;}
-.coverage-card:hover{transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+
+.coverage-card h3,
+.coverage-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.coverage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.bangalore  { background-image: url('banglore.webp'); }
+.mumbai     { background-image: url('mumbai.webp'); }
+.delhi      { background-image: url('delhi.webp'); }
+.chennai    { background-image: url('chennai.webp'); }
+.pune       { background-image: url('pune.webp'); }
+.hyderabad  { background-image: url('hyderabad.webp'); }
 
 /* CTA SECTION */
 .cta-section {
@@ -179,31 +225,31 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:12px 2
   <p>Experience blazing fast internet in your area. Check below to see the regions we cover and how we deliver consistent high-speed connectivity.</p>
 </section>
 
-<!-- COVERAGE GRID -->
+<!-- COVERAGE SECTION -->
 <section class="coverage-section">
   <h2>Coverage Areas</h2>
   <div class="coverage-grid">
-    <a href="404error.html" class="coverage-card" style="background-image:url('banglore.webp');">
+    <a href="404error.html" class="coverage-card bangalore">
       <h3>Bangalore</h3>
       <p>Fiber network across residential and commercial zones with speeds up to 1 Gbps.</p>
     </a>
-    <a href="404error.html" class="coverage-card" style="background-image:url('mumbai.webp');">
+    <a href="404error.html" class="coverage-card mumbai">
       <h3>Mumbai</h3>
       <p>Extensive fiber optic coverage in urban areas for uninterrupted connectivity.</p>
     </a>
-    <a href="404error.html" class="coverage-card" style="background-image:url('delhi.webp');">
+    <a href="404error.html" class="coverage-card delhi">
       <h3>Delhi</h3>
       <p>High-speed internet across multiple sectors with reliable connection.</p>
     </a>
-    <a href="404error.html" class="coverage-card" style="background-image:url('chennai.webp');">
+    <a href="404error.html" class="coverage-card chennai">
       <h3>Chennai</h3>
       <p>Strong signal strength and excellent uptime across districts.</p>
     </a>
-    <a href="404error.html" class="coverage-card" style="background-image:url('pune.webp');">
+    <a href="404error.html" class="coverage-card pune">
       <h3>Pune</h3>
       <p>Fiber internet in key areas for streaming, gaming, and work-from-home.</p>
     </a>
-    <a href="404error.html" class="coverage-card" style="background-image:url('hyderabad.webp');">
+    <a href="404error.html" class="coverage-card hyderabad">
       <h3>Hyderabad</h3>
       <p>Low latency and high-speed connections across neighborhoods and tech hubs.</p>
     </a>
